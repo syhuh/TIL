@@ -1,5 +1,5 @@
 // FUNCTION DECLARATIONS
-function greet(firstName = 'John', lastName = 'Doe') {
+function greet(firstName = 'John', lastName = 'Doe'){
   return `Hello ${firstName} ${lastName}`;
 }
 
@@ -16,3 +16,21 @@ console.log(square(8));
 (function(name){
   console.log(`Goodbye ${name}`);
 })('Brad');
+
+// PROPERTY METHODS
+const todo = {
+  add: function(){
+    console.log('Add todo..');
+  },
+  edit: function(id) {
+    console.log(`Edit todo ${id}`);
+  }
+}
+
+todo.delete = function(){
+  console.log('Delete todo..');
+}
+
+todo.add();
+todo.edit(22);
+todo.delete();
