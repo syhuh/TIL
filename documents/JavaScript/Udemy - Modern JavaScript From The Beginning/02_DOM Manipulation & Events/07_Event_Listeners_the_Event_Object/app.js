@@ -31,5 +31,6 @@ function onClick(e){
   // Coords event relative to the element
   val = e.offsetY;
   val = e.offsetX;
+  
   console.log(val);
 }
