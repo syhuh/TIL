@@ -145,7 +145,7 @@ const UICtrl = (function() {
     },
     addItemToForm: function() {
       document.querySelector(UISelectors.itemNameInput).value = ItemCtrl.getCurrentItem().name;
-      document.querySelector(UISelectors.itemCaloriesInput).value = ItemCtrl.getCurrentItem().calories;      
+      document.querySelector(UISelectors.itemCaloriesInput).value = ItemCtrl.getCurrentItem().calories;
 
       UICtrl.showEditState();
     },
@@ -165,7 +165,8 @@ const UICtrl = (function() {
       document.querySelector(UISelectors.backBtn).style.display = 'none';
       document.querySelector(UISelectors.addBtn).style.display = 'inline';
     },
-    showEditState: function() {      
+    showEditState: function() {
+      UICtrl.clearInput();
       document.querySelector(UISelectors.updateBtn).style.display = 'inline';
       document.querySelector(UISelectors.deleteBtn).style.display = 'inline';
       document.querySelector(UISelectors.backBtn).style.display = 'inline';
@@ -189,7 +190,10 @@ const App = (function(ItemCtrl, UICtrl) {
     document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
 
     // Edit icon click event
-    document.querySelector(UISelectors.itemList).addEventListener('click', itemUpdateSubmit);
+    document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
+
+    // Update item event
+    document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
   }
 
   // Add item submit
@@ -218,8 +222,8 @@ const App = (function(ItemCtrl, UICtrl) {
     e.preventDefault();
   }
 
-  // Update item submit
-  const itemUpdateSubmit = function(e) {
+  // Click edit item
+  const itemEditClick = function(e) {
     if(e.target.classList.contains('edit-item')){
       // Get list itemid (item-0, item-1)
       const listId = e.target.parentNode.parentNode.id;
@@ -242,6 +246,12 @@ const App = (function(ItemCtrl, UICtrl) {
     }
 
     e.preventDefault()
+  }
+
+  // Update item submit
+  const itemUpdateSubmit = function(e) {
+    console.log('update');
+    e.preventDefault();
   }
 
   // Public methods
