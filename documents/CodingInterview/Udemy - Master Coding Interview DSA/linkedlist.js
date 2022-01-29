@@ -87,18 +87,47 @@ class LinkedList {
     this.length--;
     return this;    
   }
+
+  reverse() {
+    //KaiOwn 1st method: prepend & remove method
+    // let node = this.head.next;
+    // let length = this.length;
+
+    // for(let i = 0; i < length - 1; i++){               
+    //   this.prepend(node.val);
+    //   node = node.next;        
+    // }      
+
+    // this.printList(); 
+    
+    // for(let i = length - 1; i > 0; i--){
+    //   this.remove(this.length - 1);
+    // }
+
+    //After see the Andrei's solution
+    //KaiReview 1st
+    let f = this.head;  // f: first
+    let s;              // s: second
+
+    while(f.next !== null){    
+      s = f.next;  
+      f.next = s.next;
+      s.next = this.head;      
+      this.head = s;
+    }    
+    this.tail = f;
+  }
 }
 
 // Test append
-// const myLinkedList = new LinkedList(10);
-// myLinkedList.append(5);
-// myLinkedList.append(16);
-// myLinkedList.append(1);
-// myLinkedList.append(3);
-// myLinkedList.append(7);
+// const myLinkedList = new LinkedList(1);
 // myLinkedList.append(2);
+// myLinkedList.append(3);
+// myLinkedList.append(4);
+// myLinkedList.append(5);
+// myLinkedList.append(6);
+// myLinkedList.append(7);
 // myLinkedList.printList();
-
 
 // Test prepend
 // const myLinkedList = new LinkedList(10);
@@ -120,13 +149,25 @@ class LinkedList {
 // myLinkedList.printList();
 
 // Test remove
-const myLinkedList = new LinkedList(10);
-myLinkedList.append(5);
-myLinkedList.append(16);
-myLinkedList.append(1);
-myLinkedList.append(3);
-myLinkedList.append(7);
+// const myLinkedList = new LinkedList(10);
+// myLinkedList.append(5);
+// myLinkedList.append(16);
+// myLinkedList.append(1);
+// myLinkedList.append(3);
+// myLinkedList.append(7);
+// myLinkedList.append(2);
+// myLinkedList.printList();
+// myLinkedList.remove(2);
+// myLinkedList.printList();
+
+// Test reverse
+const myLinkedList = new LinkedList(1);
 myLinkedList.append(2);
+myLinkedList.append(3);
+myLinkedList.append(4);
+myLinkedList.append(5);
+myLinkedList.append(6);
+myLinkedList.append(7);
 myLinkedList.printList();
-myLinkedList.remove(2);
+myLinkedList.reverse();
 myLinkedList.printList();

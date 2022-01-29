@@ -29,7 +29,6 @@ class DoublyLinkedList {
     const newNode = new Node(val);
 
     newNode.prev = this.tail; // Added for DoublyLinkedList  
-
     this.tail.next = newNode;    
     this.tail = newNode;     
 
@@ -38,11 +37,10 @@ class DoublyLinkedList {
   }
 
   prepend(val) {    
-    const newNode =new Node(val);    
-    
-    this.head.prev = newNode; // Added for DoublyLinkedList  
+    const newNode =new Node(val);        
 
     newNode.next = this.head;    
+    this.head.prev = newNode; // Added for DoublyLinkedList  
     this.head = newNode;     
 
     this.length++;
@@ -63,11 +61,11 @@ class DoublyLinkedList {
       i++;
     }
 
-    const newNode = new Node(val);    
-    newNode.next = prevNode.next;    
-    prevNode.next = newNode;
+    const newNode = new Node(val);  
 
-    newNode.prev = prevNode;      // Added for DoublyLinkedList    
+    newNode.prev = prevNode;      // Added for DoublyLinkedList  
+    newNode.next = prevNode.next;    
+    prevNode.next = newNode;      
     newNode.next.prev = newNode;  // Added for DoublyLinkedList    
 
     this.length++;
@@ -90,7 +88,6 @@ class DoublyLinkedList {
 
     let currNode = prevNode.next;
     prevNode.next = currNode.next;
-
     currNode.next.prev = prevNode; // Added for DoublyLinkedList    
     //delete currNode;
 
