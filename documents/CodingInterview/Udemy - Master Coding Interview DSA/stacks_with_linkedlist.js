@@ -51,9 +51,7 @@ class Stack {
     }
     else {
       return null;
-    }
-
-    
+    }    
   }
 }
 
