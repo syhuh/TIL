@@ -79,6 +79,7 @@ const myQueue = new Queue();
 // console.log('dequeue: ', myQueue.dequeue());  //7
 // console.log('peek: ', myQueue.peek());        //null
 // console.log('dequeue: ', myQueue.dequeue());  //null
+
 myQueue.enqueue({
   id: 1, 
   name: 'John',
