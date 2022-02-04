@@ -3,8 +3,6 @@
 function findFactorialRecursive(num){
   let answer;
 
-
-
   if(num === 1){
     return 1;
   }    
