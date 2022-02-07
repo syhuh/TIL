@@ -128,7 +128,6 @@ DFS PreOrder: 9, 4, 1, 6, 20, 15, 170
     
     return list;
   }
-
   
 //         9
 //    4          20
