@@ -2567,7 +2567,6 @@ function max_profit_simple(prices){ //O(n)
 
 // ----------------------------------------------------------------------------------------------
 // Test Drive
-
 console.log('Brute force: ', max_profit_brute_force(prices));
 //console.log('Dynamic Programming: ', max_profit_dp(prices));
 console.log('Simple & Best: ', max_profit_simple(prices));

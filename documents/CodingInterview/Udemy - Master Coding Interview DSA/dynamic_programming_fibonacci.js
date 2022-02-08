@@ -1,6 +1,9 @@
 // Given a number N return the index value of the Fibonacci sequence where the sequence is:
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
 // The pattern of the sequence is that each value is the sum of the 2 previous values, that means that for N=5 --> 2+3
+
+// ----------------------------------------------------------------------------------------------
+// Recursion
 let calculation_recursive = 0;
 
 function fibonacciRecursive(n){ // O(2^n)
@@ -13,6 +16,8 @@ function fibonacciRecursive(n){ // O(2^n)
   return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
 }
 
+// ----------------------------------------------------------------------------------------------
+// Dynamic Programming
 let calculation_dp = 0;
 
 function fibonacciDynamicProgramming(){ // O(n)
@@ -35,6 +40,8 @@ function fibonacciDynamicProgramming(){ // O(n)
   }
 }
 
+// ----------------------------------------------------------------------------------------------
+// Test Drive
 console.log("===== Just Recursion =====")
 start = Date.now();
 console.log(fibonacciRecursive(45));

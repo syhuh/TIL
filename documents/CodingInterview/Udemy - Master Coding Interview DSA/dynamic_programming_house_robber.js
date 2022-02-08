@@ -6,6 +6,7 @@
 //nums = [2, 25, 9, 8, 11];
 nums = [2, 7, 9, 3, 1];
 
+// ----------------------------------------------------------------------------------------------
 // Recursion
 let calculation_recursive = 0;
 
@@ -23,6 +24,7 @@ function lets_rob_recursive(arr, i){ // O(2^n)
   return max;
 }
 
+// ----------------------------------------------------------------------------------------------
 // Dynamic Programming
 let calculation_dp = 0;
 
@@ -45,6 +47,8 @@ function lets_rob_dp() { // O(n)
   }
 }
 
+// ----------------------------------------------------------------------------------------------
+// Test Drive
 console.log("===== Just Recursion =====")
 start = Date.now();
 console.log(lets_rob_recursive(nums, nums.length - 1));
