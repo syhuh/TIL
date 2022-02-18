@@ -222,7 +222,7 @@ Review:
 1. Solution 1. Brute force
   Time Complexity: O(N^2)
   Space Complexity: O(1)
-2. Solution 2. Improve! bla
-  Time Complexity: O()
-  Space Complexity: O()
+2. Solution 2. Improve! Using two pointers
+  Time Complexity: O(N)
+  Space Complexity: O(1)
 */
