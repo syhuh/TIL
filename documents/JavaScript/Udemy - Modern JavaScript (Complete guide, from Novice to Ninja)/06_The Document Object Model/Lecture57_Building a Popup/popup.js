@@ -16,6 +16,8 @@ close.addEventListener('click', () => {
 
 popup.addEventListener('click', e => {  
   console.log(e);
-  if(!(e.target.parentElement.className === 'popup-content' || e.target.className === 'popup-content' || e.target.className === 'popup'))
+  if(!(e.target.parentElement.className === 'popup-content' || 
+  e.target.className === 'popup-content' || 
+  e.target.className === 'popup'))
     popup.style.display = "none";  
 });
