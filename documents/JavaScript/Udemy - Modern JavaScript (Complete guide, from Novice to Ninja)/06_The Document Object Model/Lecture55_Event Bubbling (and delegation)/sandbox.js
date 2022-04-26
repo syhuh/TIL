@@ -34,6 +34,7 @@ ul.addEventListener('mouseover', e => {
   console.log('event in UL');
   console.log(e.target);
 
+  //부모엘리먼트인 ul의 이벤트핸들러에서 자식엘리먼트인 li 이벤트처리
   if(e.target.tagName === 'LI'){
     e.target.style.cursor = 'pointer';
   }
@@ -45,6 +46,7 @@ ul.addEventListener('click', e => {
   console.log('event in UL');
   console.log(e.target);
 
+  //부모엘리먼트인 ul의 이벤트핸들러에서 자식엘리먼트인 li 이벤트처리
   if(e.target.tagName === 'LI'){
     e.target.remove();
   }  

@@ -16,9 +16,9 @@
 }
 
 //-------------------------------------------------------------------------------------
-// Lecture 60. Testing RegEx Patterns
+// Lecture 61. Testing RegEx Patterns
 {
-  console.log('Lecture 60. Testing RegEx Patterns');
+  console.log('Lecture 61. Testing RegEx Patterns');
 
   const pattern = /[a-z]{6,}/;
   const username = '123kaizen';

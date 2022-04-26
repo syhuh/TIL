@@ -68,7 +68,7 @@
     logout: function() {
       console.log('the user logged out');
     },
-    logBlogs() {
+    logBlogs() { // ---> 쌤은 앞으로 이 표현을 사용할 것임.
       console.log('this user has written following blogs:');
       this.blogs.forEach(blog => {
         console.log(blog);
@@ -77,7 +77,7 @@
     testRegularFn: function() {
       console.log(this);
     },
-    testArrowFn: () => {
+    testArrowFn: () => { // ---> Arrow Fn 시 this의 동작 유의!
       console.log(this);
     }
   };
