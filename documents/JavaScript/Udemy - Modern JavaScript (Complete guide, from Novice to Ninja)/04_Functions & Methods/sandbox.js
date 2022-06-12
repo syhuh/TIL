@@ -117,6 +117,21 @@
 {
   console.log("Lecture 35. Foreach Method & Callbacks"); 
 
+  // callback fn
+  const myFunc = (callbackFunc) => {
+    let value = 50;
+    callbackFunc(value);
+  };
+
+  // myFunc(function(value){
+  //   console.log(value);
+  // });
+
+  myFunc(value => {
+    console.log(value);
+  });
+
+  // forEach
   let people = ['mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
 
   const logPerson = (person, index) => {
